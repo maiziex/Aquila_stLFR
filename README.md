@@ -1,4 +1,4 @@
-# :milky_way: Aquila :eagle: 
+# :milky_way: Aquila_stLFR :eagle: 
 
 
 ## Download:
@@ -12,7 +12,7 @@ Or you could just run "./install.sh" to check their availability and install the
 
 ## Install:
 ```
-cd Aquila
+cd Aquila_stLFR
 chmod +x install.sh
 ./install.sh
 ```
@@ -21,13 +21,13 @@ chmod +x install.sh
 After running "./install.sh", a folder "source" would be download, it includes human GRCh38 reference fasta file, or you could also just download it by yourself from the corresponding official websites. 
 
 ## Running The Code:
-Put the "Aquila/bin" in the ".bashrc" file, and source the ".bashrc" file <br />
+Put the "Aquila_stLFR/bin" in the ".bashrc" file, and source the ".bashrc" file <br />
 Or just use the fullpath of "**Aquila_Step1.py**" and "**Aquila_Step2.py**"
 
 
 ### Step 1: 
 ```
-Aquila/bin/Aquila_step1.py --bam_file possorted_bam.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila/Uniqness_map
+Aquila_stLFR/bin/Aquila_stLFR_step1.py --bam_file possorted_bam.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila/Uniqness_map
 ```
 #### *Required parameters
 ##### --bam_file: "possorted_bam.bam" is bam file generated from barcode-awere aligner like "Lonranger align". How to get bam file, you can also check <a href="https://github.com/maiziex/Aquila/blob/master/src/How_to_get_bam_and_vcf.md">here</a>.
@@ -53,7 +53,7 @@ Aquila/bin/Aquila_step1.py --bam_file possorted_bam.bam --vcf_file S12878_freeba
 
 To use the above option "--chr_start, --chr_end", it is recommended to run the below command first to save more time later. 
 ```
-python Aquila/bin/Aquila_step0_sortbam.py --bam_file possorted_bam.bam --out_dir Results_S12878 --num_threads_for_bwa_mem 20 
+python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam.py --bam_file possorted_bam.bam --out_dir Results_S12878 --num_threads_for_bwa_mem 20 
 ```
 <!--   -->
 #### Memory/Time Usage For Step 1
@@ -76,7 +76,7 @@ Coverage | Memory| Time for WGS on a single node  |
 
 ### Step 2: 
 ```
-Aquila/bin/Aquila_step2.py --out_dir Assembly_results_S12878 --num_threads 30 --reference Aquila/source/ref.fa
+Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_S12878 --num_threads 30 --reference Aquila/source/ref.fa
 ```
 #### *Required parameters
 #####  --reference: "Aquila/source/ref.fa" is the reference fasta file you can download by "./install".
@@ -113,7 +113,7 @@ Coverage| Memory| Time for WGS on a single node  | --num_threads | --num_threads
 ### Clean Data
 ##### If your hard drive storage is limited, it is suggested to quily clean some data by running "Aquila_clean.py". Or you can keep them for some analysis. 
 ```
-Aquila/bin/Aquila_clean.py --out_dir Assembly_results_S12878 
+Aquila_stLFR/bin/Aquila_stLFR_clean.py --out_dir Assembly_results_S12878 
 ```
 
 ## Final Output:
