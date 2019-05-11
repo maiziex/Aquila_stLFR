@@ -3,7 +3,7 @@
 
 ## Download:
 ```
-git clone https://github.com/maiziex/Aquila.git
+git clone https://github.com/maiziex/Aquila_stLFR.git
 ```
 
 ## Dependencies:
