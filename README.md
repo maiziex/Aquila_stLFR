@@ -27,9 +27,10 @@ Or just use the fullpath of "**Aquila_stLFR_Step1.py**" and "**Aquila_stLFR_Step
 
 ### Step 1: 
 ```
-Aquila_stLFR/bin/Aquila_stLFR_step1.py --bam_file possorted_bam.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila_stLFR/Uniqness_map
+Aquila_stLFR/bin/Aquila_stLFR_step1.py --fastq_file S12878.fastq --bam_file possorted_bam.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila_stLFR/Uniqness_map
 ```
 #### *Required parameters
+##### --fastq_file: "S12878.fastq" is the origin 10x linked-read fastq file. 
 ##### --bam_file: "possorted_bam.bam" is bam file generated from barcode-awere aligner like "Lonranger align". How to get bam file, you can also check <a href="https://github.com/maiziex/Aquila_stLFR/blob/master/src/How_to_get_bam_and_vcf.md">here</a>.
 
 ##### --vcf_file: "S12878_freebayes.vcf" is VCF file generated from variant caller like "FreeBayes". How to get vcf file, you can also check <a href="https://github.com/maiziex/Aquila_stLFR/blob/master/src/How_to_get_bam_and_vcf.md">here</a>. 
