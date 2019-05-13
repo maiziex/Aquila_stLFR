@@ -2,7 +2,9 @@
 
 To check how to download and use "longranger align" or download human reference genome, go to <a href="https://support.10xgenomics.com/genome-exome/software/downloads/latest">10X GENOMICS Website</a>.
 ```
-longranger align --id=S12878_lysis --reference=./refdata-GRCh38-2.1.0 --fastqs=./S12878_Lysis/Final_fastqs
+mkdir temp_bwa
+bwa mem -t 32 -C -R '@RG\tID:7597:LibraryNotSpecified:1:unknown_fc:0\tSM:7597' Aquila_stLFR/source/ref.fa -p S12878.fastq  | samtools view -bS - | samtools sort -T ./temp_bwa/temp_sorting -o S12878.bam 
+samtools index S12878.bam
 ```
 
 
@@ -11,5 +13,5 @@ longranger align --id=S12878_lysis --reference=./refdata-GRCh38-2.1.0 --fastqs=.
 "possorted_bam.bam" is generated from the above "longranger align"
 
 ```
-freebayes -f ./refdata-GRCh38-2.1.0/fasta/genome.fa possorted_bam.bam > S12878_grch38_ref_freebayes.vcf 
+freebayes -f Aquila_stLFR/source/ref.fa S12878.bam > S12878_freebayes.vcf 
 ```
