@@ -179,7 +179,7 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_merged --num_t
 ##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. 
 
 ### Notes
-#### For stLFR assembly or hybrid assembly, reads with barcode "0_0_0" are removed to get perfect diploid assembly.  
+#### For stLFR assembly or hybrid assembly, stLFR reads with barcode "0_0_0" are removed to get perfect diploid assembly.  
 
 ## Cite Aquila_stLFR:
 #### Aquila_stLFR: human haplotype-resolved assembly and variant detection package for single tube long fragment read sequencing
