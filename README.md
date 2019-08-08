@@ -56,7 +56,7 @@ To use the above option "--chr_start, --chr_end", it is recommended to run the b
 ```
 python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam.py --bam_file possorted_bam.bam --out_dir Results_S12878 --num_threads_for_bwa_mem 20 
 ```
-<!--   -->
+<!--   
 #### Memory/Time Usage For Step 1
 ##### Running Step 1 for chromosomes parallelly on multiple(23) nodes
 
@@ -71,7 +71,7 @@ Coverage | Memory| Time for WGS on a single node  |
 60X | 350GB | 2-00:00:00 |
 90X | 500GB | 2-00:00:00 |
 
-
+-->
 
 
 
@@ -93,7 +93,7 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_S12878 --num_t
 
 ##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 2" 
 
-<!-- -->
+<!-- 
 #### Memory/Time Usage For Step 2
 ##### Running Step 2 for chromosomes parallelly on multiple nodes
 Coverage| Memory| Time for chr1 on a single node | --num_threads | --num_threads_spades|
@@ -106,7 +106,7 @@ Coverage| Memory| Time for WGS on a single node  | --num_threads | --num_threads
  ---| --- | --- | ---|---|
 60X| 100GB | 2-12:00:00 |30 | 10|
 90X| 100GB | 2-12:00:00 |30 | 10|
- 
+-->
 
 
 
@@ -128,11 +128,11 @@ Aquila_stLFR outputs an overall contig file “Aquila_Contig_chr*.fasta” for e
 ##### Please check check <a href="https://github.com/maiziex/Aquila_stLFR/blob/master/Assembly_based_variants_call/README.md/">Assembly_based_variants_call_and_phasing</a> for details. 
 
 
-# Assembly for multiple libraries:
+# Assembly for hybrid assembly of 10x linked-reads and stLFR:
 
 ### Step 1: 
 ```
-Aquila_stLFR/bin/Aquila_stLFR_step1_hybrid.py --bam_file_list ./S24385_Lysis_2/Longranger_align_bam/S24385_lysis_2/outs/possorted_bam.bam,./S24385_Lysis_2H/Longranger_align_bam/S24385_lysis_2H/outs/possorted_bam.bam --vcf_file_list ./S24385_lysis_2/Freebayes_results/S24385_lysis_2_grch38_ref_freebayes.vcf,./S24385_lysis_2H/Freebayes_results/S24385_lysis_2H_grch38_ref_freebayes.vcf --sample_name_list S24385_lysis_2,S24385_lysis_2H --out_dir Assembly_results_merged --uniq_map_dir Aquila_stLFR/Uniqness_map
+Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list ./S24385_Lysis_2/Longranger_align_bam/S24385_lysis_2/outs/possorted_bam.bam,./S24385_Lysis_2H/Longranger_align_bam/S24385_lysis_2H/outs/possorted_bam.bam --vcf_file_list ./S24385_lysis_2/Freebayes_results/S24385_lysis_2_grch38_ref_freebayes.vcf,./S24385_lysis_2H/Freebayes_results/S24385_lysis_2H_grch38_ref_freebayes.vcf --sample_name_list S24385_lysis_2,S24385_lysis_2H --out_dir Assembly_results_merged --uniq_map_dir Aquila_stLFR/Uniqness_map
 ```
 #### *Required parameters
 ##### --bam_file: "possorted_bam.bam" is bam file generated from barcode-awere aligner like "Lonranger align". Each bam file is seperately by comma (",").
