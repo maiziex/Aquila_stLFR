@@ -180,3 +180,12 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_merged --num_t
 
 ### Notes
 #### For stLFR assembly or hybrid assembly, reads with barcode "0_0_0" are removed to get perfect diploid assembly.  
+
+## Cite Aquila_stLFR:
+#### Aquila_stLFR: human haplotype-resolved assembly and variant detection package for single tube long fragment read sequencing
+##### <a href="https://www.biorxiv.org/content/10.1101/660605v1">bioRxiv link</a>
+
+## Troubleshooting:
+##### Please submit issues on the github page for <a href="https://github.com/maiziex/Aquila_stLFR/issues">Aquila</a>. 
+##### Or contact with me through <a href="xzhou15@cs.stanford.edu">xzhou15@cs.stanford.edu</a>
+
