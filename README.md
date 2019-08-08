@@ -128,19 +128,19 @@ Aquila_stLFR outputs an overall contig file “Aquila_Contig_chr*.fasta” for e
 ##### Please check check <a href="https://github.com/maiziex/Aquila_stLFR/blob/master/Assembly_based_variants_call/README.md/">Assembly_based_variants_call_and_phasing</a> for details. 
 
 
-# Assembly for hybrid assembly of 10x linked-reads and stLFR:
+# Hybrid assembly of 10x linked-reads and stLFR:
 
 ### Step 1: 
 ```
-Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list ./S24385_Lysis_2/Longranger_align_bam/S24385_lysis_2/outs/possorted_bam.bam,./S24385_Lysis_2H/Longranger_align_bam/S24385_lysis_2H/outs/possorted_bam.bam --vcf_file_list ./S24385_lysis_2/Freebayes_results/S24385_lysis_2_grch38_ref_freebayes.vcf,./S24385_lysis_2H/Freebayes_results/S24385_lysis_2H_grch38_ref_freebayes.vcf --sample_name_list S24385_lysis_2,S24385_lysis_2H --out_dir Assembly_results_merged --uniq_map_dir Aquila_stLFR/Uniqness_map
+Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list 10x.bam,stLFR.bam --vcf_file_list S24385_10x_freebayes.vcf,S24385_stLFR_freebayes.vcf --sample_name_list S24385_10x,S24385_stLFR --out_dir Assembly_results_hybrid --uniq_map_dir Aquila_stLFR/Uniqness_map
 ```
 #### *Required parameters
-##### --bam_file: "possorted_bam.bam" is bam file generated from barcode-awere aligner like "Lonranger align". Each bam file is seperately by comma (",").
+##### --bam_file: "10x.bam" is bam file generated from barcode-awere aligner like "Lonranger align". "stLFR.bam" is bam file generated from "bwa-mem". Each bam file is seperately by comma (",").
 
-##### --vcf_file: "S12878_freebayes.vcf" is VCF file generated from variant caller like "FreeBayes". Each VCF file is seperately by comma (",").
+##### --vcf_file: "S24385_10x_freebayes.vcf" and "S24385_stLFR_freebayes.vcf" are VCF files generated from variant caller like "FreeBayes". Each VCF file is seperately by comma (",").
 
 
-#####  --sample_name: S24385_lysis_2,S24385_lysis_2H are the sample names you can define. Each sample name is seperately by comma (",").
+#####  --sample_name: S24385_10x,S24385_stLFR are the sample names you can define. Each sample name is seperately by comma (",").
 
 #####  --uniq_map_dir: "Aquila_stLFR/Uniqness_map" is the uniqness file you can download by "./install.sh".
 
@@ -178,4 +178,5 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_merged --num_t
 
 ##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. 
 
-
+### Notes
+#### For stLFR assembly or hybrid assembly, reads with barcode "0_0_0" are removed to get perfect diploid assembly.  
