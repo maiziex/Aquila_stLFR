@@ -1,7 +1,7 @@
 # :milky_way: Aquila_stLFR :eagle: 
 
 
-## Download:
+## Download Aquila_stLFR v1.1:
 ```
 git clone https://github.com/maiziex/Aquila_stLFR.git
 ```
