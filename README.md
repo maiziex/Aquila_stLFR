@@ -22,7 +22,7 @@ After running "./install.sh", a folder "source" would be download, it includes h
 
 ## Running The Code:
 Put the "Aquila_stLFR/bin" in the ".bashrc" file, and source the ".bashrc" file <br />
-Or just use the fullpath of "**Aquila_stLFR_Step1.py**" and "**Aquila_stLFR_Step2.py**"
+Or just use the fullpath of "**Aquila_stLFR_step1.py**" and "**Aquila_stLFR_step2.py**"
 
 
 ### Step 1: 
