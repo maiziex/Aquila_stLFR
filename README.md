@@ -186,6 +186,6 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_merged --num_t
 ##### <a href="https://www.biorxiv.org/content/10.1101/660605v1">bioRxiv link</a>
 
 ## Troubleshooting:
-##### Please submit issues on the github page for <a href="https://github.com/maiziex/Aquila_stLFR/issues">Aquila</a>. 
+##### Please submit issues on the github page for <a href="https://github.com/maiziex/Aquila_stLFR/issues">Aquila_stLFR</a>. 
 ##### Or contact with me through <a href="xzhou15@cs.stanford.edu">xzhou15@cs.stanford.edu</a>
 
