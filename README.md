@@ -54,7 +54,7 @@ Aquila_stLFR/bin/Aquila_stLFR_step1.py --fastq_file S12878.fastq --bam_file S128
 
 To use the above option "--chr_start, --chr_end", it is recommended to run the below command first to save more time later. 
 ```
-python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam.py --bam_file possorted_bam.bam --out_dir Results_S12878 --num_threads_for_bwa_mem 20 
+python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam.py --bam_file S12878.bam --out_dir Assembly_results_S12878 --num_threads_for_bwa_mem 20 
 ```
 <!--   
 #### Memory/Time Usage For Step 1
@@ -164,7 +164,7 @@ python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam_hybrid.py --bam_file_list 10x
 
 ### Step 2: (The same as single library assembly)
 ```
-Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_merged --num_threads 30 --reference Aquila_stLFR/source/ref.fa
+Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_hybrid --num_threads 30 --reference Aquila_stLFR/source/ref.fa
 ```
 #### *Required parameters
 #####  --reference: "Aquila_stLFR/source/ref.fa" is the reference fasta file you can download by "./install".
