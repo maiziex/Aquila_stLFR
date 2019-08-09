@@ -1,4 +1,4 @@
-0. Inputs are origin paired stLFR fastq files, to preprocess it: :octocat: <br />
+0. Inputs are origin paired stLFR fastq files, preprocess it to run Aquila_stLFR: :octocat: <br />
 ```
 python Aquila_stLFR_fastq_preprocess.py -1 stLFR1_split_read.1.fq.gz -2 stLFR1_split_read.2.fq.gz -o S12878.fastq
 ```
