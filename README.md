@@ -176,7 +176,7 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_hybrid --num_t
 #### For stLFR assembly or hybrid assembly, stLFR reads with barcode "0_0_0" are removed to get perfect diploid assembly.  
 
 ## Cite Aquila_stLFR:
-#### Aquila_stLFR: human haplotype-resolved assembly and variant detection package for single tube long fragment read sequencing
+#### Aquila_stLFR: human haplotype-resolved assembly based variant detection package for single tube long fragment read sequencing
 ##### <a href="https://www.biorxiv.org/content/10.1101/660605v1">bioRxiv link</a>
 
 ## Troubleshooting:
