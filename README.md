@@ -56,20 +56,17 @@ To use the above option "--chr_start, --chr_end", it is recommended to run the b
 ```
 python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam.py --bam_file S12878.bam --out_dir Assembly_results_S12878 --num_threads_for_bwa_mem 20 
 ```
-<!--   
+<!--  
 #### Memory/Time Usage For Step 1
 ##### Running Step 1 for chromosomes parallelly on multiple(23) nodes
 
 Coverage | Memory| Time for chr1 on a single node | 
 --- | --- | --- | 
-60X | 100GB | 18:00:00 |
-90X | 150GB | 18:00:00 |
+90X | 300GB | 1-10:00:00 |
 
-##### Running Step 1 for WGS on a single node with large memory
-Coverage | Memory| Time for WGS on a single node  | 
+Coverage | Memory| Time for chr21 on a single node | 
 --- | --- | --- | 
-60X | 350GB | 2-00:00:00 |
-90X | 500GB | 2-00:00:00 |
+90X | 100GB | 07:33:21 |
 
 -->
 
@@ -98,14 +95,10 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_S12878 --num_t
 ##### Running Step 2 for chromosomes parallelly on multiple nodes
 Coverage| Memory| Time for chr1 on a single node | --num_threads | --num_threads_spades|
 --- | --- | --- | ---|---|
-60X| 100GB | 10:00:00 |30 | 10|
-90X| 100GB | 17:55:08 |30 | 10|
+90X| 100GB |  |30 | 20|
 
-##### Running Step 2 for WGS on a single node with large memory
-Coverage| Memory| Time for WGS on a single node  | --num_threads | --num_threads_spades|
- ---| --- | --- | ---|---|
-60X| 100GB | 2-12:00:00 |30 | 10|
-90X| 100GB | 2-12:00:00 |30 | 10|
+Coverage| Memory| Time for chr21 on a single node | --num_threads | --num_threads_spades|
+90X| 100GB | 01:28:16 |30 | 20|
 -->
 
 
@@ -161,6 +154,7 @@ To use the above option "--chr_start, --chr_end", it is recommended to run the b
 ```
 python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam_hybrid.py --bam_file_list 10x.bam,stLFR.bam --out_dir Assembly_results_hybrid --num_threads_for_bwa_mem 10 --sample_name_list S24385_10x,S24385_stLFR 
 ```
+
 
 ### Step 2: (The same as single library assembly)
 ```
