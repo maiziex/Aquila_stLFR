@@ -48,13 +48,13 @@ Aquila_stLFR/bin/Aquila_stLFR_step1.py --fastq_file S12878.fastq --bam_file S128
 
 ##### --num_threads, default = 8. It's recommended not to change this setting unless large memory node could be used (2*memory capacity(it suggests for assembly below)), then try to use "--num_threads 12". 
 
-##### --num_threads_for_bwa_mem, default = 20. This setting is evoked for "bwa mem".
+##### --num_threads_for_samtools_sort, default = 20. This setting is evoked for "bwa mem".
 
 ##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 5"  will assemble chromsomes 1,2,3,4,5. Use "--chr_start 2 --chr_end 2" will only assemlby chromosome 2. 
 
 To use the above option "--chr_start, --chr_end", it is recommended to run the below command first to save more time later. 
 ```
-python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam.py --bam_file S12878.bam --out_dir Assembly_results_S12878 --num_threads_for_bwa_mem 20 
+python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam.py --bam_file S12878.bam --out_dir Assembly_results_S12878 --num_threads_for_samtools_sort 20 
 ```
 <!--  
 #### Memory/Time Usage For Step 1
@@ -144,13 +144,13 @@ Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list 10x.bam,stLFR.bam --vcf_
 
 ##### --num_threads, default = 8. It's recommended not to change this setting unless large memory node could be used (2*memory capacity(it suggests for assembly below)), then try to use "--num_threads 12". 
 
-##### --num_threads_for_bwa_mem, default = 20. This setting is evoked for "bwa mem".
+##### --num_threads_for_samtools_sort, default = 20. This setting is evoked for "bwa mem".
 
 
 ##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 5"  will assemble chromsomes 1,2,3,4,5. Use "--chr_start 2 --chr_end 2" will only assemlby chromosome 2. 
 To use the above option "--chr_start, --chr_end", it is recommended to run the below command first to save more time later. 
 ```
-python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam_hybrid.py --bam_file_list 10x.bam,stLFR.bam --out_dir Assembly_results_hybrid --num_threads_for_bwa_mem 10 --sample_name_list S24385_10x,S24385_stLFR 
+python Aquila_stLFR/bin/Aquila_stLFR_step0_sortbam_hybrid.py --bam_file_list 10x.bam,stLFR.bam --out_dir Assembly_results_hybrid --num_threads_for_samtools_sort 10 --sample_name_list S24385_10x,S24385_stLFR 
 ```
 
 
