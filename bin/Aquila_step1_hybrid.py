@@ -25,7 +25,7 @@ parser.add_argument('--sample_name_list','-name',help="sample name list")
 parser.add_argument('--out_dir','-o', help="Directory to store output",default="./Asssembly_results")
 parser.add_argument('--uniq_map_dir','-uniq_dir', help="Directory to 100-mer uniqness")
 parser.add_argument('--num_threads','-t_chr',type=int,help="number of threads", default=8)
-parser.add_argument('--num_threads_for_bwa_mem','-t',type=int,help="number of threads", default=20)
+parser.add_argument('--num_threads_for_samtools_sort','-t',type=int,help="number of threads for samtools sort", default=20)
 parser.add_argument('--block_threshold','-bt',type=int,help="phase block threshold",default=200000)
 parser.add_argument('--block_len_use','-bl',type=int,help="phase block len threshold",default=100000)
 
@@ -128,7 +128,7 @@ if __name__ == "__main__":
         block_threshold = args.block_threshold
         uniq_map_dir = args.uniq_map_dir + "/"
         num_threads = args.num_threads
-        num_threads_for_bwa_mem = args.num_threads_for_bwa_mem
+        num_threads_for_bwa_mem = args.num_threads_for_samtools_sort
         HighConf_file_dir = args.out_dir + "/HighConf_file/"
         phased_file_dir = args.out_dir + "/results_phased_probmodel/"
         phase_blocks_cut_highconf_dir = args.out_dir + "/phase_blocks_cut_highconf/"
@@ -239,7 +239,7 @@ if __name__ == "__main__":
             sample_name = sample_list[_num]
             Raw_fastqs_dir_sample = args.out_dir + "/Raw_fastqs_" + sample_name + "/"
             Bam_dir_sample = args.out_dir + "/sorted_bam_" + sample_name + "/"
-            pool.apply_async(Get_fastq_files_total,(bam_file,chr_start,chr_end,num_threads_for_bwa_mem,Raw_fastqs_dir_sample,Bam_dir_sample,"xin"))
+            pool.apply_async(Get_fastq_files_total,(bam_file,chr_start,chr_end,num_threads_for_samtools_sort,Raw_fastqs_dir_sample,Bam_dir_sample,"xin"))
             _num += 1
         pool.close()
         while len(active_children()) > 1:
