@@ -18,7 +18,7 @@ parser.add_argument('--sample_name','-name',help="sample name you can define, fo
 parser.add_argument('--out_dir','-o', help="Directory to store assembly results, default = ./Assembly_results",default="./Asssembly_results")
 parser.add_argument('--uniq_map_dir','-uniq_dir', help="Directory for 100-mer uniqness, run ./install to download it",required=True)
 parser.add_argument('--num_threads','-t_chr',type=int,help="number of threads, default = 8 (recommended)", default=8)
-parser.add_argument('--num_threads_for_bwa_mem','-t',type=int,help="number of threads for bwa-mem, default = 20", default=20)
+#parser.add_argument('--num_threads_for_bwa_mem','-t',type=int,help="number of threads for bwa-mem, default = 20", default=20)
 parser.add_argument('--block_threshold','-bt',type=int,help="phase block threshold, default = 200000",default=200000)
 parser.add_argument('--block_len_use','-bl',type=int,help="phase block len threshold, default = 100000",default=100000)
 
@@ -72,7 +72,7 @@ if __name__ == "__main__":
         block_threshold = args.block_threshold
         uniq_map_dir = args.uniq_map_dir + "/"
         num_threads = int(args.num_threads)
-        num_threads_for_bwa_mem = int(args.num_threads_for_bwa_mem)
+        #num_threads_for_bwa_mem = int(args.num_threads_for_bwa_mem)
         sample_name = args.sample_name
         h5_dir = args.out_dir + "/H5_for_molecules/"
         HighConf_file_dir = args.out_dir + "/HighConf_file/"
