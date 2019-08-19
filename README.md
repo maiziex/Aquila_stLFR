@@ -141,8 +141,7 @@ Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list 10x.bam,stLFR.bam --vcf_
 
 
 ##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 5"  will assemble chromsomes 1,2,3,4,5. Use "--chr_start 2 --chr_end 2" will only assemlby chromosome 2. 
-(*Notes: Use 23 for "chrX")
-To use the above option "--chr_start, --chr_end", it is recommended (not required) to run the below command first to save more time for step1. 
+(*Notes: Use 23 for "chrX") To use the above option "--chr_start, --chr_end", it is recommended (not required) to run the below command first to save more time for step1. 
 ```
 python Aquila/bin/Aquila_step0_sortbam_hybrid.py --bam_file_list ./S24385_Lysis_2/Longranger_align_bam/S24385_lysis_2/outs/possorted_bam.bam,./S24385_Lysis_2H/Longranger_align_bam/S24385_lysis_2H/outs/possorted_bam.bam --out_dir Assembly_results_merged --num_threads_for_samtools_sort 10 --sample_name_list S24385_lysis_2,S24385_lysis_2H 
 
