@@ -93,6 +93,7 @@ Coverage| Memory| Time for chr1 on a single node | --num_threads | --num_threads
 90X| 100GB | 11:13:19 |30 | 20|
 
 Coverage| Memory| Time for chr21 on a single node | --num_threads | --num_threads_spades|
+--- | --- | --- | ---|---|
 90X| 100GB | 01:38:09 |30 | 20|
 
 
