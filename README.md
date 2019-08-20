@@ -85,16 +85,16 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_S12878 --num_t
 
 ##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 2" 
 
-<!-- 
+
 #### Memory/Time Usage For Step 2
 ##### Running Step 2 for chromosomes parallelly on multiple nodes
 Coverage| Memory| Time for chr1 on a single node | --num_threads | --num_threads_spades|
 --- | --- | --- | ---|---|
-90X| 100GB |  |30 | 20|
+90X| 100GB | 11:13:19 |30 | 20|
 
 Coverage| Memory| Time for chr21 on a single node | --num_threads | --num_threads_spades|
-90X| 100GB | 01:28:16 |30 | 20|
--->
+90X| 100GB | 01:38:09 |30 | 20|
+
 
 
 ## Final Output:
