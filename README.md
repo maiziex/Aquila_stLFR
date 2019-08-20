@@ -48,22 +48,22 @@ Aquila_stLFR/bin/Aquila_stLFR_step1.py --fastq_file S12878.fastq --bam_file S128
 
 ##### --num_threads, default = 8. It's recommended not to change this setting unless large memory node could be used (2*memory capacity(it suggests for assembly below)), then try to use "--num_threads 12". 
 
-##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 5"  will assemble chromsomes 1,2,3,4,5. Use "--chr_start 2 --chr_end 2" will only assemlby chromosome 2. 
+##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 5"  will assemble chromsomes 1,2,3,4,5. Use "--chr_start 2 --chr_end 2" will only assembly chromosome 2. 
 (*Notes: Use 23 for "chrX")
 
-<!--  
+
 #### Memory/Time Usage For Step 1
 ##### Running Step 1 for chromosomes parallelly on multiple(23) nodes
 
 Coverage | Memory| Time for chr1 on a single node | 
 --- | --- | --- | 
-90X | 300GB | 1-10:00:00 |
+90X | 350GB | 1-10:20:10 |
 
 Coverage | Memory| Time for chr21 on a single node | 
 --- | --- | --- | 
-90X | 100GB | 07:33:21 |
+90X | 150GB | 07:33:21 |
 
--->
+
 
 
 
