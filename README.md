@@ -61,7 +61,7 @@ Coverage | Memory| Time for chr1 on a single node |
 
 Coverage | Memory| Time for chr21 on a single node | 
 --- | --- | --- | 
-90X | 150GB | 07:33:21 |
+90X | 150GB | 11:26:50 |
 
 
 
