@@ -17,17 +17,17 @@ script_path = os.path.dirname(os.path.abspath( __file__ ))
 code_path = script_path + "/" 
 __author__ = "Xin Zhou@Stanford"
 parser = ArgumentParser(description="Author: xzhou15@cs.stanford.edu\n",usage='use "python3 %(prog)s --help" for more information')
-parser.add_argument('--bam_file_list','-bam',help="bam file list")
-parser.add_argument('--vcf_file_list','-v',help="vcf file list")
+parser.add_argument('--bam_file_list','-bam',help="Required parameter, BAM file list, each BAM file is seperately by comma \",\". For example: 1.bam,2.bam",required=True)
+parser.add_argument('--vcf_file_list','-v',help="Required parameter, VCF file list, each VCF file is seperately by comma \",\" . For example: 1.vcf,2.vcf",required=True)
 parser.add_argument('--chr_start','-start',type=int,help="chromosome start from", default=1)
 parser.add_argument('--chr_end','-end',type=int,help="chromosome end by", default=23)
-parser.add_argument('--sample_name_list','-name',help="sample name list")
+parser.add_argument('--sample_name_list','-name',help="Required parameter, sample name list, each sample name is seperately by comma \",\". For example: S24385_lysis_2,S24385_lysis_2H",required=True)
 parser.add_argument('--out_dir','-o', help="Directory to store output",default="./Asssembly_results")
-parser.add_argument('--uniq_map_dir','-uniq_dir', help="Directory to 100-mer uniqness")
+parser.add_argument('--uniq_map_dir','-uniq_dir', help="Required parameter,Directory to 100-mer uniqness",required=True)
 parser.add_argument('--num_threads','-t_chr',type=int,help="number of threads", default=8)
 parser.add_argument('--num_threads_for_samtools_sort','-t',type=int,help="number of threads for samtools sort", default=20)
-parser.add_argument('--block_threshold','-bt',type=int,help="phase block threshold",default=200000)
-parser.add_argument('--block_len_use','-bl',type=int,help="phase block len threshold",default=100000)
+parser.add_argument('--block_threshold','-bt',type=int,help="phase block threshold, default = 200000(200kb)",default=200000)
+parser.add_argument('--block_len_use','-bl',type=int,help="phase block len threshold, default = 100000(100kb)",default=100000)
 
 args = parser.parse_args()
 bam_list = [item for item in args.bam_file_list.split(',')]
