@@ -9,8 +9,8 @@ script_path = os.path.dirname(os.path.abspath( __file__ ))
 code_path = script_path + "/" 
 __author__ = "Xin Zhou@Stanford"
 parser = ArgumentParser(description="Author: xzhou15@cs.stanford.edu\n",usage='use "python3 %(prog)s --help" for more information')
-parser.add_argument('--fastq_file','-f',help="origin 10x fastq file",required=True)
-parser.add_argument('--bam_file','-bam',help="bam file, called by Longranger align",required=True)
+parser.add_argument('--fastq_file','-f',help="stLFR fastq file with paired reads",required=True)
+parser.add_argument('--bam_file','-bam',help="bam file, called by bwa mem",required=True)
 parser.add_argument('--vcf_file','-v',help="vcf file, called by FreeBayes",required=True)
 parser.add_argument('--chr_start','-start',type=int,help="chromosome start from, default = 1", default=1)
 parser.add_argument('--chr_end','-end',type=int,help="chromosome end by,default = 23", default=22)
