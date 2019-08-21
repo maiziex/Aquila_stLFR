@@ -334,7 +334,7 @@ def get_homozygous_variants(vcf_file,output_file):
 
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 1:
         Popen("python3 " + "Aquila_phasing_all_variants.py -h",shell=True).wait()
     else:
@@ -401,4 +401,5 @@ if __name__ == "__main__":
         Popen(final_sort_cmd,shell=True).wait()
 
 
-        
+if __name__ == "__main__":
+    main()
