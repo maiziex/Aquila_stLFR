@@ -10,10 +10,10 @@ code_path = script_path + "/"
 __author__ = "Xin Zhou@Stanford"
 
 parser = ArgumentParser(description="sort bam by qname:")
-parser.add_argument('--bam_file_list','-bam',help="bam file list",required=True)
+parser.add_argument('--bam_file_list','-bam',help="Required Parameter, BAM file list, each BAM file is seperately by comma \",\". For example: 1.bam,2.bam",required=True)
 parser.add_argument('--out_dir','-o', help="output folder",default="./Asssembly_results")
-parser.add_argument('--sample_name_list','-sl', help='The sample names list', type=str,required=True)
-parser.add_argument('--num_threads_for_samtools_sort','-t',type=int, help=" The number of threads you can define for samtoos sort",default=20)
+parser.add_argument('--sample_name_list','-sl', help='Required Parameter, The sample names list, each sample name is seperately by comma ",". For example: S24385_lysis_2,S24385_lysis_2H', type=str,required=True)
+parser.add_argument('--num_threads_for_samtools_sort','-t',type=int, help=" The number of threads you can define for samtoos sort, default = 20",default=20)
 args = parser.parse_args()
 
 def sort_start(sort_bam_cmd,idx_bam_cmd,xin):
