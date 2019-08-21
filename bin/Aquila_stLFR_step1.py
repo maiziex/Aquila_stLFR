@@ -92,4 +92,4 @@ def main():
         Extract_reads_for_small_chunks(chr_start,chr_end,h5_dir,phase_blocks_cut_highconf_dir,Local_Assembly_dir,Raw_fastqs_dir,block_len_use,sample_name,12)
     
   if __name__ == "__main__":
-        main()
+    main()
