@@ -66,7 +66,7 @@ def Complete_contiguity(chr_start,chr_end,Assembly_Contigs_dir,phase_blocks_cut_
   
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 1:
         Popen("python " + "Aquila_step2.py -h",shell=True).wait()
     else:
@@ -103,3 +103,5 @@ if __name__ == "__main__":
         local_assembly_for_small_chunks(chr_start,chr_end,num_threads,num_threads_spades,Local_Assembly_dir,Assembly_Contigs_dir)
         Complete_contiguity(chr_start,chr_end,Assembly_Contigs_dir,phase_blocks_cut_highconf_dir,cut_threshold,ref_dir,ref_idx_file)
     
+if __name__ == "__main__":
+    main()
