@@ -66,7 +66,7 @@ def Aquila_clean(in_dir,chr_start,chr_end,num_of_threads):
  
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 1:
         Popen("python3 " + "Aquila_clean.py -h",shell=True).wait()
     else:
@@ -76,4 +76,5 @@ if __name__ == "__main__":
         chr_end = args.chr_end
         Aquila_clean(in_dir,chr_start,chr_end,num_of_threads)
 
-
+if __name__ == "__main__":
+    main()
