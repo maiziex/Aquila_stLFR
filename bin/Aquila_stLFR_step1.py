@@ -59,7 +59,7 @@ def Extract_reads_for_small_chunks(chr_start,chr_end,h5_dir,phase_blocks_cut_hig
 
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 1:
         Popen("python3 " + "Aquila_step1.py -h",shell=True).wait()
     else:
@@ -91,4 +91,5 @@ if __name__ == "__main__":
         Get_fastq_files_total(fastq_file,chr_start,chr_end,6,Raw_fastqs_dir,h5_dir,sample_name)
         Extract_reads_for_small_chunks(chr_start,chr_end,h5_dir,phase_blocks_cut_highconf_dir,Local_Assembly_dir,Raw_fastqs_dir,block_len_use,sample_name,12)
     
-    
+  if __name__ == "__main__":
+        main()
