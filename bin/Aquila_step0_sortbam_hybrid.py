@@ -21,7 +21,7 @@ def sort_start(sort_bam_cmd,idx_bam_cmd,xin):
     Popen(idx_bam_cmd,shell=True).wait()
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 1:
         Popen("python3 " + "Aquila_sortbam_hybrid.py -h",shell=True).wait()
     else:
@@ -59,3 +59,7 @@ if __name__ == "__main__":
             time.sleep(0.5)
         pool.join()
         print("Sorting bam finished...")
+        
+        
+if __name__ == "__main__":
+    main()
