@@ -256,7 +256,7 @@ def Clean_data(out_dir):
 
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 1:
         Popen("python3 " + "Aquila_assembly_based_variants_call.py -h",shell=True).wait()
     else:
@@ -283,3 +283,5 @@ if __name__ == "__main__":
             Clean_data(out_dir)
 
 
+if __name__ == "__main__":
+    main()
