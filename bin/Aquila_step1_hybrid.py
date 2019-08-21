@@ -118,7 +118,7 @@ def remove_barcode000(h5_file_sorted,h5_dir,chr_num):
 
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 1:
         Popen("python3 " + "Aquila_step1.py -h",shell=True).wait()
     else:
@@ -285,6 +285,7 @@ if __name__ == "__main__":
         pool.join()
 
 
-
+if __name__ == "__main__":
+    main()
 
 
