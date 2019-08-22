@@ -11,7 +11,7 @@ from Assign_phase_block_v4 import *
 import sys
 from scipy.special import comb
 import glob
-from Molecule_phase_alg2_withProbModel_v3_MT2 import *
+from .Molecule_phase_alg2_withProbModel_v3_MT2 import *
 from argparse import ArgumentParser
 script_path = os.path.dirname(os.path.abspath( __file__ ))
 code_path = script_path + "/" 
