@@ -34,7 +34,7 @@ bam_list = [item for item in args.bam_file_list.split(',')]
 vcf_list = [item for item in args.vcf_file_list.split(',')]
 sample_list = [item for item in args.sample_name_list.split(',')]
 
-def Get_fragment_files(bam_file,vcf_file,chr_start,chr_end,h5_dir):
+def Get_fragment_files(bam_file,vcf_file,chr_start,chr_end,h5_dir,sample_name):
     use_cmd = "python3 " + code_path + "Run_h5_all_multithreads.py" + " --bam_file " + bam_file + " --vcf_file " + vcf_file + " --sample_name " + sample_name + " --chr_start " + str(chr_start) + " --chr_end " + str(chr_end) + " --mbq 13 --mmq 20 --boundary 50000 " + " --num_threads " + str(num_threads) + " --out_dir " + h5_dir
     Popen(use_cmd,shell=True).wait()
 
@@ -158,7 +158,7 @@ def main():
             sample_name = sample_list[_num]
             _num += 1
             h5_dir = args.out_dir + "/H5_for_molecules_" + sample_name + "/"
-            Get_fragment_files(bam_file,vcf_file,chr_start,chr_end,h5_dir)
+            Get_fragment_files(bam_file,vcf_file,chr_start,chr_end,h5_dir,sample_name)
             h5_file_prefix_list.append(h5_dir + sample_name + "_chr")
             for chr_num in range(chr_start, chr_end + 1):
                 remove_barcode000(h5_dir + sample_name + "_chr" + str(chr_num),h5_dir,chr_num)   ### add for remove barcode "0_0_0" for stLFR
