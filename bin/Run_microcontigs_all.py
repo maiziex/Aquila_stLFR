@@ -4,7 +4,7 @@ import pdb
 import os
 import numpy as np
 from argparse import ArgumentParser
-from Concatenate_contigs_all_v4_extend_for_HCbk import *
+from .Concatenate_contigs_all_v4_extend_for_HCbk import *
 from multiprocessing import Pool,cpu_count,active_children,Manager
 import time
 script_path = os.path.dirname(os.path.abspath( __file__ ))
