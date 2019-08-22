@@ -10,7 +10,7 @@ import time
 from collections import defaultdict
 import pickle
 import numpy as np
-from Merge_reads_for_PB_of_merged_libs_v2 import *
+from .Merge_reads_for_PB_of_merged_libs_v2 import *
 
 
 script_path = os.path.dirname(os.path.abspath( __file__ ))
