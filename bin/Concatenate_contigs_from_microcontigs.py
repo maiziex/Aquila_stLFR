@@ -7,7 +7,7 @@ from argparse import ArgumentParser
 from multiprocessing import Pool,cpu_count,active_children,Manager
 from subprocess import Popen
 import time
-from Make_supercontig_based_on_HCbk_from_sam_v5 import *
+from .Make_supercontig_based_on_HCbk_from_sam_v5 import *
 script_path = os.path.dirname(os.path.abspath( __file__ ))
 code_path = script_path + "/" 
 
