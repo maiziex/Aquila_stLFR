@@ -7,11 +7,11 @@ import time
 import pickle
 import os
 import numpy as np
-from Assign_phase_block_v3 import * 
+from .Assign_phase_block_v3 import * 
 import sys
 from scipy.special import comb
 import glob
-from Molecule_phase_alg2_withProbModel_v3_MT2_hybrid import *
+from .Molecule_phase_alg2_withProbModel_v3_MT2_hybrid import *
 from argparse import ArgumentParser
 script_path = os.path.dirname(os.path.abspath( __file__ ))
 code_path = script_path + "/" 
