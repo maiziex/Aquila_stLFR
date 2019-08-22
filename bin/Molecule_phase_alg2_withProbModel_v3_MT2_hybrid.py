@@ -5,7 +5,7 @@ import pickle
 import math
 import os
 import numpy as np
-from Assign_phase_block_v3 import * 
+from .Assign_phase_block_v3 import * 
 import sys
 import operator
 from scipy.special import comb
