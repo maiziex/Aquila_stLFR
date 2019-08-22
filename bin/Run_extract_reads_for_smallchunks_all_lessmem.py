@@ -7,7 +7,7 @@ import numpy as np
 from argparse import ArgumentParser
 from collections import defaultdict
 from multiprocessing import Pool,cpu_count,active_children
-from .Extract_qname_from_phased_molecule_cut_phase_blocks_v3 import *
+from Extract_qname_from_phased_molecule_cut_phase_blocks_v3 import *
 import time
 from subprocess import Popen
 
