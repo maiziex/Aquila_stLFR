@@ -7,7 +7,7 @@ from argparse import ArgumentParser
 from multiprocessing import Pool,cpu_count,active_children,Manager
 from subprocess import Popen
 import time
-from Concatenate_contigs_all_v4_extend_for_HCbk import *
+from .Concatenate_contigs_all_v4_extend_for_HCbk import *
 import multiprocessing
 script_path = os.path.dirname(os.path.abspath( __file__ ))
 code_path = script_path + "/" 
