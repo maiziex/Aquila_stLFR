@@ -187,6 +187,17 @@ Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list 10x.bam,stLFR.bam --vcf_
 python Aquila_stLFR/bin/Aquila_step0_sortbam_hybrid.py --bam_file_list ./S24385_Lysis_2/Longranger_align_bam/S24385_lysis_2/outs/possorted_bam.bam,./S24385_Lysis_2H/Longranger_align_bam/S24385_lysis_2H/outs/possorted_bam.bam --out_dir Assembly_results_merged --num_threads_for_samtools_sort 10 --sample_name_list S24385_lysis_2,S24385_lysis_2H 
 ```
 
+#### Memory/Time Usage For Step 1
+##### Running Step 1 for chromosomes parallelly on multiple(23) nodes
+
+
+Coverage | Memory| Time for chr22 on a single node | 
+--- | --- | --- | 
+90X(stLFR) + 90X (10x linked-reads)| 200GB | 11:39:50 |
+
+
+
+
 ### Step 2: (The same as single library assembly)
 ```
 Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_hybrid --num_threads 30 --reference Aquila_stLFR/source/ref.fa
