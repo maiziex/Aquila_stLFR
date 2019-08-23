@@ -50,7 +50,7 @@ def Aquila_clean(in_dir,chr_start,chr_end,num_of_threads):
     Popen(rm_cmd,shell=True).wait()
     print("Cleaning Raw_fastqs done!")
 
-    bam_dir = in_dir + "sorted_bam/"
+    bam_dir = in_dir + "sorted_bam*/"
     rm_cmd = "rm -rf " + bam_dir
     Popen(rm_cmd,shell=True).wait()
     print("Cleaning sorted_bam done!")
