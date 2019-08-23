@@ -45,6 +45,10 @@ def Aquila_clean(in_dir,chr_start,chr_end,num_of_threads):
 
     print("Cleaning local assembly by chunks files done!")
     
+    _dir = in_dir + "Local_Assembly_by_chunks*/"
+    rm_cmd = "rm -rf " + _dir
+    Popen(rm_cmd,shell=True).wait()
+    
     _dir = in_dir + "Local_Assembly_by_chunks*"
     rm_cmd = "rm -rf " + _dir
     Popen(rm_cmd,shell=True).wait()
