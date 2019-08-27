@@ -1,10 +1,11 @@
 # :milky_way: Aquila_stLFR :eagle: 
 
 
-## Download Aquila_stLFR v1.1:
+## Download Aquila_stLFR v1.1 through Bioconda:
 ```
-git clone https://github.com/maiziex/Aquila_stLFR.git
+conda install aquila_stlfr
 ```
+(Please ensure <a href="https://bioconda.github.io/user/install.html#set-up-channels">channels</a> are properly setup for bioconda before installing) 
 
 ## Dependencies:
 Aquila_stLFR utilizes <a href="https://www.python.org/downloads/">Python3 (+ numpy, pysam, and scipy)</a>, <a href="http://samtools.sourceforge.net/">SAMtools</a>, and <a href="https://github.com/lh3/minimap2">minimap2</a>. To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable (".bashrc"). <br />
