@@ -158,7 +158,7 @@ Aquila_stLFR outputs an overall contig file “Aquila_Contig_chr*.fasta” for e
 ### Clean Data
 ##### If your hard drive storage is limited, it is suggested to quily clean some data by running "Aquila_stLFR_clean.py". Or you can keep them for some analysis (check the above output directory tree for details). 
 ```
-Aquila_stLFR/bin/Aquila_stLFR_clean.py --out_dir Assembly_results_S12878 
+Aquila_stLFR/bin/Aquila_stLFR_clean.py --assembly_dir Assembly_results_S12878 
 ```
 
 ## Assembly Based Variants Calling and Phasing:
