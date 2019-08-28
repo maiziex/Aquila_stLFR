@@ -18,7 +18,7 @@ Aquila_stLFR_fastq_preprocess --help
 # You can also check the below corresponding scripts for details
 ```
 ```
-#Download the reference file (GRCh38)
+#Download the reference file (hg38)
 wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/source.tar.gz
 
 #Download hg38 "Uniqness_map"
