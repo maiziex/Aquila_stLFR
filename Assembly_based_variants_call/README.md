@@ -26,19 +26,23 @@ Use "--all_regions_flag 1" for variants calling in all regions. For compound SVs
 #### *Final Output
 ##### "Aquila_final_sorted.vcf": it includes SNPs, indels, and SVs. (This coordinate of this VCF file starts from 0)
 
+
+
+#### Memory/Time Usage for "--all_regions_flag 1" (This mode is used for reporting variants calling in Aquila_stLFR paper)
+| Memory| --num_of_threads | Time for WGS |
+| --- | --- | --- | 
+| 350GB | 2 | 01:10:33|
+| 200GB | 1 | 02:01:13|
+
 #### Memory/Time Usage for "--all_regions_flag 0"
 | Memory| --num_of_threads | Time for WGS |
 | --- | --- | --- | 
 | 100GB | 1 |1-10:24:32 |
 | 150GB | 2 |17:35:45 |
 | 250GB | 3 | 13:25:06|
-| 350GB | 4 | 09:58:44|
-| 600GB | 5 | 09:31:08|
 
-#### Memory/Time Usage for "--all_regions_flag 1"
-| Memory| --num_of_threads | Time for WGS |
-| --- | --- | --- | 
-| 350GB | 2 | 01:10:33|
+
+
 
 
 # 2. Phasing all types of variants  :eagle:
