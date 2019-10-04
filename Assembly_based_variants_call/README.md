@@ -25,6 +25,7 @@ Use "--all_regions_flag 1" for variants calling in all regions. For compound SVs
 
 #### *Final Output
 ##### "Aquila_final_sorted.vcf": it includes SNPs, indels, and SVs. (This coordinate of this VCF file starts from 0)
+##### :octocat: To evaluate snp/indel/SV from "Aquila_final_sorted.vcf" with GIAB Gold standards, check <a href="https://github.com/xinzhoucs/Aquila_VCF_Reformat_and_Evaluate">here</a> in details. 
 
 
 
