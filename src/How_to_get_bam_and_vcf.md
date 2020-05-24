@@ -4,6 +4,11 @@ python Aquila_stLFR/bin/Aquila_stLFR_fastq_preprocess.py -1 stLFR1_split_read.1.
 ```
 stLFR1_split_read.1.fq.gz, stLFR1_split_read.2.fq.gz are origin stLFR paired fastq files. You can download this stLFR library from ftp://ftp.cngb.org/pub/CNSA/CNP0000066/CNS0007597/CNX0005843/CNR0006054/.
 
+*C version of Aquila_stLFR_fastq_preprocess, 10 times faster than python version if you need to preprocess large fastq files.
+```
+Aquila_stLFR/bin/Aquila_stLFR_fastq_preprocess -1 stLFR1_split_read.1.fq.gz -2 stLFR1_split_read.2.fq.gz -o S12878.fastq
+```
+
 
 1. Inputs is 10X `fastqs` files, to get `bam` file: :octocat: <br />
 
