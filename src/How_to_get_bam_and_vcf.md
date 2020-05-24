@@ -6,6 +6,8 @@ stLFR1_split_read.1.fq.gz, stLFR1_split_read.2.fq.gz are origin stLFR paired fas
 
 *C version of Aquila_stLFR_fastq_preprocess, 10 times faster than python version if you need to preprocess large fastq files.
 ```
+cd Aquila_stLFR/bin
+gcc Aquila_stLFR_fastq_preprocess.c -lz -o Aquila_stLFR_fastq_preprocess
 Aquila_stLFR/bin/Aquila_stLFR_fastq_preprocess -1 stLFR1_split_read.1.fq.gz -2 stLFR1_split_read.2.fq.gz -o S12878.fastq
 ```
 
