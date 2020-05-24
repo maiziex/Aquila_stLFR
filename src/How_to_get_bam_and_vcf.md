@@ -11,7 +11,7 @@ cd Aquila_stLFR/bin
 gcc Aquila_stLFR_fastq_preprocess.c -lz -o Aquila_stLFR_fastq_preprocess
 Aquila_stLFR/bin/Aquila_stLFR_fastq_preprocess -1 stLFR1_split_read.1.fq.gz -2 stLFR1_split_read.2.fq.gz -o S12878.fastq
 ```
-or used the compiled executable
+Or use the compiled executable
 ```
 chmod +x Aquila_stLFR/bin/Aquila_stLFR_fastq_preprocess 
 Aquila_stLFR/bin/Aquila_stLFR_fastq_preprocess -1 stLFR1_split_read.1.fq.gz -2 stLFR1_split_read.2.fq.gz -o S12878.fastq
