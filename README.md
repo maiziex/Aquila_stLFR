@@ -242,7 +242,7 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_hybrid --num_t
 #### Aquila_stLFR: assembly based variant calling package for stLFR and hybrid assembly for linked-reads.
 ##### <a href="http://biorxiv.org/cgi/content/short/742239v1">bioRxiv link</a>
 
-#### You can also check <a href="https://github.com/maiziex/Aquila">Aquila</a> here 
+#### Please also check <a href="https://github.com/maiziex/Aquila">Aquila</a> here 
 
 ## Troubleshooting:
 ##### Please submit issues on the github page for <a href="https://github.com/maiziex/Aquila_stLFR/issues">Aquila_stLFR</a>. 
