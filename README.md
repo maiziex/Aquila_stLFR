@@ -238,9 +238,6 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_hybrid --num_t
 ### Notes
 #### For stLFR assembly or hybrid assembly, stLFR reads with barcode "0_0_0" are removed to get perfect diploid assembly.  
 
-## Cite Aquila_stLFR:
-#### Aquila_stLFR: assembly based variant calling package for stLFR and hybrid assembly for linked-reads.
-##### <a href="http://biorxiv.org/cgi/content/short/742239v1">bioRxiv link</a>
 
 #### Please also check <a href="https://github.com/maiziex/Aquila">Aquila</a> here 
 
