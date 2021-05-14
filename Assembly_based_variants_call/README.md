@@ -26,7 +26,7 @@ Aquila/bin/Aquila_stLFR_assembly_based_variants_call.py --assembly_dir Assembly_
 Use "--all_regions_flag 1" for variants calling in all regions. For compound SVs, we split one compound SV into two heterozygous SVs. You can process compound SVs by your own definition based on the coordinates from the final VCF file. 
 
 #### *Final Output
-##### "Aquila_final_sorted.vcf": it includes SNPs, indels, and SVs. (This coordinate of this VCF file starts from 0)
+**Aquila_final_sorted.vcf:** it includes SNPs, indels, and SVs. (This coordinate of this VCF file starts from 0)
 ##### :octocat: To evaluate snp/indel/SV from "Aquila_final_sorted.vcf" with GIAB Gold standards, check <a href="https://github.com/xinzhoucs/Aquila_VCF_Reformat_and_Evaluate">here</a> in details. 
 
 
@@ -68,8 +68,7 @@ Aquila/bin/Aquila_stLFR_phasing_all_variants.py --assembly_vcf Variants_results_
 **--block_len_use:** default = 100000, it is the same "--block_len_use" used in assembly steps. 
 
 #### *Final Output
-##### "Aquila_all_phased_sorted.vcf". 
-It includes phased SNPs, indels, SVs, all homozygous variants, and a small set of unphased variants. (This coordinate of this VCF file starts from 1)
+**Aquila_all_phased_sorted.vcf:** It includes phased SNPs, indels, SVs, all homozygous variants, and a small set of unphased variants. (This coordinate of this VCF file starts from 1)
 
 #### Memory/Time Usage
 | Memory | Time for WGS |
