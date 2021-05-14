@@ -94,18 +94,18 @@ Coverage | Memory| Time for chr21 on a single node |
 Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_S12878 --num_threads 30 --reference Aquila_stLFR/source/ref.fa
 ```
 #### *Required parameters
-#####  --reference: "Aquila_stLFR/source/ref.fa" is the reference fasta file you can download by "./install".
+**--reference** "Aquila_stLFR/source/ref.fa" is the reference fasta file you can download by "./install".
 
 #### *Optional parameters
-#####  --out_dir, default = ./Asssembly_results, make sure it's the same as "--out_dir" from ***Step1*** if you want to define your own output directory name.
+**--out_dir** default = ./Asssembly_results, make sure it's the same as "--out_dir" from ***Step1*** if you want to define your own output directory name.
 
-#####  --num_threads, default = 30, this determines the number of files assembled simultaneously by SPAdes.  
+**--num_threads** default = 30, this determines the number of files assembled simultaneously by SPAdes.  
 
-#####  --num_threads_spades, default = 5, this is the "-t" for SPAdes. 
+**--num_threads_spades** default = 5, this is the "-t" for SPAdes. 
 
-##### --block_len_use, default = 100000 (100kb)
+**--block_len_use** default = 100000 (100kb)
 
-##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 2" 
+**--chr_start --chr_end** if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 2" 
 
 
 #### Memory/Time Usage For Step 2
@@ -183,27 +183,27 @@ wget http://xinzhouneuroscience.org/wp-content/uploads/2019/06/Uniqness_map_hg19
 Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list 10x.bam,stLFR.bam --vcf_file_list S24385_10x_freebayes.vcf,S24385_stLFR_freebayes.vcf --sample_name_list S24385_10x,S24385_stLFR --out_dir Assembly_results_hybrid --uniq_map_dir Aquila_stLFR/Uniqness_map
 ```
 #### *Required parameters
-##### --bam_file: "10x.bam" is bam file generated from barcode-awere aligner like "Lonranger align". "stLFR.bam" is bam file generated from "bwa-mem". Each bam file is seperately by comma (",").
+**--bam_file** "10x.bam" is bam file generated from barcode-awere aligner like "Lonranger align". "stLFR.bam" is bam file generated from "bwa-mem". Each bam file is seperately by comma (",").
 
-##### --vcf_file: "S24385_10x_freebayes.vcf" and "S24385_stLFR_freebayes.vcf" are VCF files generated from variant caller like "FreeBayes". Each VCF file is seperately by comma (",").
+**--vcf_file** "S24385_10x_freebayes.vcf" and "S24385_stLFR_freebayes.vcf" are VCF files generated from variant caller like "FreeBayes". Each VCF file is seperately by comma (",").
 
 
-#####  --sample_name: S24385_10x,S24385_stLFR are the sample names you can define. Each sample name is seperately by comma (",").
+**--sample_name** S24385_10x,S24385_stLFR are the sample names you can define. Each sample name is seperately by comma (",").
 
-#####  --uniq_map_dir: "Aquila_stLFR/Uniqness_map" is the uniqness file you can download by "./install.sh".
+**--uniq_map_dir** "Aquila_stLFR/Uniqness_map" is the uniqness file you can download by "./install.sh".
 
 #### *Optional parameters
-#####  --out_dir, default = ./Asssembly_results 
+**--out_dir** default = ./Asssembly_results 
 
-##### --block_threshold, default = 200000 (200kb)
+**--block_threshold** default = 200000 (200kb)
  
-##### --block_len_use, default = 100000 (100kb)
+**--block_len_use** default = 100000 (100kb)
 
-##### --num_threads, default = 8. It's recommended not to change this setting unless large memory node could be used (2*memory capacity(it suggests for assembly below)), then try to use "--num_threads 12". 
+**--num_threads** default = 8. It's recommended not to change this setting unless large memory node could be used (2*memory capacity(it suggests for assembly below)), then try to use "--num_threads 12". 
 
-##### --num_threads_for_samtools_sort, default = 20. This setting is evoked for "samtools sort".
+**--num_threads_for_samtools_sort** default = 20. This setting is evoked for "samtools sort".
 
-##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 5"  will assemble chromsomes 1,2,3,4,5. Use "--chr_start 2 --chr_end 2" will only assemlby chromosome 2. 
+**--chr_start --chr_end** if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 5"  will assemble chromsomes 1,2,3,4,5. Use "--chr_start 2 --chr_end 2" will only assemlby chromosome 2. 
 (*Notes: Use 23 for "chrX") To use the above option "--chr_start, --chr_end", it is recommended (not required) to run the below command first to save more time for step1. 
 ```
 python Aquila_stLFR/bin/Aquila_step0_sortbam_hybrid.py --bam_file_list ./S24385_Lysis_2/Longranger_align_bam/S24385_lysis_2/outs/possorted_bam.bam,./S24385_Lysis_2H/Longranger_align_bam/S24385_lysis_2H/outs/possorted_bam.bam --out_dir Assembly_results_merged --num_threads_for_samtools_sort 10 --sample_name_list S24385_lysis_2,S24385_lysis_2H 
@@ -225,16 +225,16 @@ Coverage | Memory| Time for chr22 on a single node |
 Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_hybrid --num_threads 30 --reference Aquila_stLFR/source/ref.fa
 ```
 #### *Required parameters
-#####  --reference: "Aquila_stLFR/source/ref.fa" is the reference fasta file you can download by "./install".
+**--reference** "Aquila_stLFR/source/ref.fa" is the reference fasta file you can download by "./install".
 
 #### *Optional parameters
-#####  --out_dir, default = ./Asssembly_results, make sure it's the same as "--out_dir" from step1 if you want to define your own output directory name.
+**--out_dir** default = ./Asssembly_results, make sure it's the same as "--out_dir" from step1 if you want to define your own output directory name.
 
-#####  --num_threads, default = 20 
+**--num_threads** default = 20 
 
-##### --block_len_use, default = 100000 (100kb)
+**--block_len_use** default = 100000 (100kb)
 
-##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. 
+**--chr_start --chr_end** if you only want to assembly some chromosomes or only one chromosome. 
 
 ### Notes
 #### For stLFR assembly or hybrid assembly, stLFR reads with barcode "0_0_0" are removed to get perfect diploid assembly.  
