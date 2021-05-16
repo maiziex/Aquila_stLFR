@@ -1,6 +1,6 @@
 You can download the example data <a href="https://drive.google.com/drive/folders/1h6Ln1opf5vTAMjuUzmDzb9RgV7n1ybZi?usp=sharing">here</a>.
 ```
-Assembly_results_S12878
+Aquila_stLFR_exampledata
 |-test.fastq
 |
 |-test.bam 
