@@ -6,6 +6,7 @@ Aquila_stLFR_exampledata
 |-test.fastq
 |
 |-test.bam 
+|-test.bam.bai
 |
 |-test_freebayes.vcf 
 |
