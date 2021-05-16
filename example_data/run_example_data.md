@@ -1,4 +1,4 @@
-We also provide a small chromosome's (**chr21**) example dataset to run the whole pipeline before you try it to the large dataset. 
+#### We also provide a small chromosome's (**chr21**) example dataset to run the whole pipeline before you try it to the large dataset. 
 
 Please download the example data <a href="https://drive.google.com/drive/folders/1h6Ln1opf5vTAMjuUzmDzb9RgV7n1ybZi?usp=sharing">here</a>.
 ```
