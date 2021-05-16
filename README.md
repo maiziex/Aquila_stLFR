@@ -45,7 +45,7 @@ After running "./install.sh", a folder "source" would be download, it includes h
 Put the "Aquila_stLFR/bin" in the ".bashrc" file, and source the ".bashrc" file <br />
 Or just use the fullpath of "**Aquila_stLFR_step1.py**" and "**Aquila_stLFR_step2.py**"
 
-We also provide  <a href="https://github.com/maiziex/Aquila_stLFR/edit/master/example_data/run_example_data.md">a small chromosome's (chr21) example dataset</a> to run the whole pipeline before you dive into the large dataset. 
+We also provide  <a href="https://github.com/maiziex/Aquila_stLFR/edit/master/example_data/run_example_data.md">a small chromosome's (chr21) example dataset</a> to run the whole pipeline before you try it to the large dataset. 
 
 
 ### Step 1: 
