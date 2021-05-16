@@ -14,7 +14,7 @@ Aquila_stLFR_exampledata
 
 To run the whole pipeline:
 ```
-python Aquila_stLFR/bin/Aquila_stLFR_step1.py --bam_file test.bam --vcf_file test_freebayes.vcf --sample_name test --chr_start 21 --chr_end 21 --out_dir test_asm --uniq_map_dir Uniqness_map_hg19/ --fastq_file test.fastq
+python Aquila_stLFR/bin/Aquila_stLFR_step1.py --bam_file test.bam --vcf_file test_freebayes.vcf --sample_name test --chr_start 21 --chr_end 21 --out_dir test_asm --uniq_map_dir Uniqness_map_hg19 --fastq_file test.fastq
 
 python Aquila_stLFR/bin/Aquila_stLFR_step2.py --chr_start 21 --chr_end 21 --out_dir test_asm --num_threads 40 --num_threads_spades 20 --reference /oak/stanford/groups/arend/Xin/Software/refdata-hg19-2.1.0/fasta/genome.fa
 
