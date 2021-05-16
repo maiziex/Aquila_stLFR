@@ -13,7 +13,7 @@ Aquila_stLFR_exampledata
 |       └genome.fa
 ```
 
-To run the whole pipeline:
+Run the whole pipeline:
 ```
 python Aquila_stLFR/bin/Aquila_stLFR_step1.py --bam_file test.bam --vcf_file test_freebayes.vcf --sample_name test --chr_start 21 --chr_end 21 --out_dir test_asm --uniq_map_dir Uniqness_map_hg19 --fastq_file test.fastq
 
