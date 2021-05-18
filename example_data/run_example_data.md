@@ -5,10 +5,10 @@ Please download the example data <a href="https://drive.google.com/drive/folders
 Aquila_stLFR_exampledata
 |-test.fastq
 |
-|-test.bam 
+|-test.bam (hg19)
 |-test.bam.bai
 |
-|-test_freebayes.vcf 
+|-test_freebayes.vcf (hg19)
 |
 |-refdata-hg19-2.1.0
 |   └fasta 
