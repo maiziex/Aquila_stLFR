@@ -1,6 +1,6 @@
 #### We provide a small chromosome's (**chr21**) example dataset to run the whole pipeline before you try it to the large dataset. 
 
-Please download the example data <a href="https://zenodo.org/record/4905003#.YL1wCjZKjPA">here</a>.
+Please download the example data <a href="https://zenodo.org/record/4905003#.YL1wCjZKjPA">from Zenodo</a>.
 ```
 Aquila_stLFR_exampledata
 |-test.fastq
