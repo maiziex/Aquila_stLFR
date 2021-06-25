@@ -13,7 +13,7 @@ Aquila_stLFR_exampledata
 |-genome_hg19.fa         
 ```
 
-Please download hg19 "Uniqness_map" folder by wget using the below link
+Please download hg19 "Uniqness_map" folder by wget 
 ```
 wget http://xinzhouneuroscience.org/wp-content/uploads/2019/06/Uniqness_map_hg19.tar.gz 
 ```
