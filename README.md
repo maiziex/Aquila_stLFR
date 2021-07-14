@@ -244,7 +244,7 @@ Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_hybrid --num_t
 #### Please also check <a href="https://github.com/maiziex/Aquila">Aquila</a> here 
 
 ## Cite Aquila_stLFR:
-#### Aquila_stLFR: diploid genome assembly based structural variant calling package for stLFR linked-reads. Y.H. Liu, G. L. Grubbs, L. Zhang, X. Fang, D. L. Dill, A. Sidow, X. Zhou. Bioinformatics Advances (in press)
+#### Aquila_stLFR: diploid genome assembly based structural variant calling package for stLFR linked-reads. Y.H. Liu, G. L. Grubbs, L. Zhang, X. Fang, D. L. Dill, A. Sidow, X. Zhou. Bioinformatics Advances 2021 (in press)
 
 ## Troubleshooting:
 ##### Please submit issues on the github page for <a href="https://github.com/maiziex/Aquila_stLFR/issues">Aquila_stLFR</a>. 
