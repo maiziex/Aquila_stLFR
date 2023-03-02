@@ -1,5 +1,7 @@
 # :milky_way: Aquila_stLFR :eagle: 
 [![BioConda Install](https://img.shields.io/conda/dn/bioconda/aquila_stlfr.svg?style=flag&label=BioConda%20install)](https://anaconda.org/bioconda/aquila_stlfr)
+*News: 2023/03/01: we upload the Uniqness map and source files (ref.fa for hg38) to Zenodo for users to download.
+
 # Install through Bioconda (The updated version 1.2.11):
 Version <a href="https://github.com/maiziex/Aquila_stLFR/blob/master/src/version_history_tracking.md">history tracking</a> 
 ```
@@ -20,10 +22,10 @@ Aquila_stLFR_fastq_preprocess --help
 ```
 ```
 #Download the reference file (hg38)
-wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/source.tar.gz
+wget https://zenodo.org/record/7689958/files/source.tar.gz
 
 #Download hg38 "Uniqness_map"
-wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/Uniqness_map.tar.gz
+wget https://zenodo.org/record/7689958/files/Uniqness_map_hg38.tar.gz
 ```
 ## Dependencies for Github installation:
 Aquila_stLFR utilizes <a href="https://www.python.org/downloads/">Python3 (+ numpy, pysam, sortedcontainers, and scipy)</a>, <a href="http://samtools.sourceforge.net/">SAMtools</a>, and <a href="https://github.com/lh3/minimap2">minimap2</a>. To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable (".bashrc"). <br />
@@ -50,7 +52,7 @@ Or just use the fullpath of "**Aquila_stLFR_step1.py**" and "**Aquila_stLFR_step
 
 ### Step 1: 
 ```
-Aquila_stLFR/bin/Aquila_stLFR_step1.py --fastq_file S12878.fastq --bam_file S12878.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila_stLFR/Uniqness_map
+Aquila_stLFR/bin/Aquila_stLFR_step1.py --fastq_file S12878.fastq --bam_file S12878.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila_stLFR/Uniqness_map_hg38
 ```
 #### *Required parameters
 **--fastq_file:** "S12878.fastq" is the stLFR fastq file (with BX:Z:barcode at the header, you can use Aquila_stLFR/bin/Aquila_stLFR_fastq_preprocess.py to generate the input fastq file, <a href="https://github.com/maiziex/Aquila_stLFR/blob/master/src/How_to_get_bam_and_vcf.md">check here for the processing details</a>)
@@ -61,7 +63,7 @@ Aquila_stLFR/bin/Aquila_stLFR_step1.py --fastq_file S12878.fastq --bam_file S128
 
 **--sample_name:** "S12878" are the sample name you can define. 
 
-**--uniq_map_dir:** "Aquila_stLFR/Uniqness_map" is the uniqness file you can download by "./install.sh".
+**--uniq_map_dir:** "Aquila_stLFR/Uniqness_map_hg38" is the uniqness file you can download by "./install.sh".
 
 #### *Optional parameters
 **--out_dir:** default = ./Asssembly_results. You can define your own folder, for example "Assembly_results_S12878". 
@@ -173,7 +175,7 @@ Aquila_stLFR/bin/Aquila_stLFR_clean.py --assembly_dir Assembly_results_S12878
 ##### 1. Download hg19 reference from <a href="https://support.10xgenomics.com/genome-exome/software/downloads/latest">10x Genomics website</a>
 ##### 2. Download hg19 "Uniqness_map" folder by wget using the link
 ```
-wget http://xinzhouneuroscience.org/wp-content/uploads/2019/06/Uniqness_map_hg19.tar.gz 
+wget https://zenodo.org/record/7689958/files/Uniqness_map_hg19.tar.gz
 ```
 ##### If you want to run Aquila for other diploid species with high quality reference genomes, to generate `Uniqness_map` for Aquila, check the details of  <a href="https://bismap.hoffmanlab.org/">hoffmanMappability</a> to get the corresponding "k100.umap.bed.gz", then run `Aquila/bin/Get_uniqnessmap_for_Aquila.py` to get the final "Uniqness_map" folder to run Aquila.
 ##### Or you can use our "Aquila_uniqmap" to generate the `Uniqness_map` folder to run Aquila, check <a href="https://github.com/maiziex/Aquila/blob/master/src/How_to_get_uniqmap_folder.md">How_to_get_Umap</a> for details.
@@ -182,7 +184,7 @@ wget http://xinzhouneuroscience.org/wp-content/uploads/2019/06/Uniqness_map_hg19
 
 ### Step 1: 
 ```
-Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list 10x.bam,stLFR.bam --vcf_file_list S24385_10x_freebayes.vcf,S24385_stLFR_freebayes.vcf --sample_name_list S24385_10x,S24385_stLFR --out_dir Assembly_results_hybrid --uniq_map_dir Aquila_stLFR/Uniqness_map
+Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list 10x.bam,stLFR.bam --vcf_file_list S24385_10x_freebayes.vcf,S24385_stLFR_freebayes.vcf --sample_name_list S24385_10x,S24385_stLFR --out_dir Assembly_results_hybrid --uniq_map_dir Aquila_stLFR/Uniqness_map_hg38
 ```
 #### *Required parameters
 **--bam_file:** "10x.bam" is bam file generated from barcode-awere aligner like "Lonranger align". "stLFR.bam" is bam file generated from "bwa-mem". Each bam file is seperately by comma (",").
@@ -191,7 +193,7 @@ Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list 10x.bam,stLFR.bam --vcf_
 
 **--sample_name:** S24385_10x,S24385_stLFR are the sample names you can define. Each sample name is seperately by comma (",").
 
-**--uniq_map_dir:** "Aquila_stLFR/Uniqness_map" is the uniqness file you can download by "./install.sh".
+**--uniq_map_dir:** "Aquila_stLFR/Uniqness_map_hg38" is the uniqness file you can download by "./install.sh".
 
 #### *Optional parameters
 **--out_dir:** default = ./Asssembly_results 
